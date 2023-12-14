@@ -1,3 +1,38 @@
+const userHome = document.querySelector(".user-home");
+
+const state = {
+  username: "JaneDoe",
+  projects: ["Completing this SBA", "Saving the World"],
+  tasks: ["walk the dog", "do laundry", "go shopping"],
+};
+
+function renderUser() {
+  userHome.innerHTML = `
+    <h4 class="username">${state.username}</h4>
+    <div class="projects">${state.projects}</div>
+      <ul class="tasks">
+       ${state.tasks
+         .map(() => {
+           const newElement = `<li>${state.tasks}</li>`;
+           return newElement;
+         })
+         .join(" ")}
+      </ul>
+    </div>  
+  `;
+}
+
+renderUser();
+
+const projectToBeAdded = "Christmas Dinner for 20";
+
+function handleAddProject() {
+  state.projects.push(projectToBeAdded);
+  renderUser();
+}
+
+document.querySelector("button").addEventListener("click", handleAddProject);
+
 function toggleSubtasks() {
   const subtaskHeader = document.getElementById("subtaskHeader");
   const subtaskInput = document.querySelector(".subtask");
