@@ -112,7 +112,7 @@ function addTask(event) {
       taskInput.value = "";
       subtaskInput.value = "";
     }
-    // Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+    // Modify HTML or text content of at least one element in response to user interaction
     function handleButtonClick() {
       const newElement = document.createElement("div"); // Create new element
       newElement.innerHTML = "Button Clicked!"; // Modify content
@@ -123,7 +123,7 @@ function addTask(event) {
       .querySelector("button")
       .addEventListener("click", handleButtonClick);
 
-    // Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+    // Modify the style and/or CSS classes of an element in response to user interactions using the style or classList property
     function handleMouseOver(event) {
       event.target.style.backgroundColor = "lightblue";
     }
