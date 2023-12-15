@@ -166,7 +166,6 @@ function addTask(event) {
     console.log("Document URL:", document.URL);
 
     // Include at least one form and/or input with HTML attribute validation.
-    // Example: Add 'required' attribute to an input field for HTML validation.
     const formInput = document.querySelector(".task");
     formInput.setAttribute("required", true);
 
